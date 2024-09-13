@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Detection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Breast Cancer Detection</h1>
+        <form id="prediction-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="radius">Radius:</label>
+                <input type="number" step="0.01" id="radius" name="radius" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="texture">Texture:</label>
+                <input type="number" step="0.01" id="texture" name="texture" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="perimeter">Perimeter:</label>
+                <input type="number" step="0.01" id="perimeter" name="perimeter" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="area">Area:</label>
+                <input type="number" step="0.01" id="area" name="area" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="image-upload">Image (for CNN model):</label>
+                <input type="file" id="image-upload" name="image-upload" class="form-control-file" accept="image/*">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+
+        <div id="result" class="mt-4">
+            <div id="prediction-rf" class="alert" role="alert"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

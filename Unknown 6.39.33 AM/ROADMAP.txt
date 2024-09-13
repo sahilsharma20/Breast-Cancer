@@ -1,0 +1,10 @@
+breast_cancer_prediction/
+│
+├── static/
+│   └── (empty folder for saving EDA plots)
+│
+├── templates/
+│   └── index.html
+│
+├── app.py
+└── ml_code.py

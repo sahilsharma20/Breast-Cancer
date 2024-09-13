@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Breast Cancer Detection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Breast Cancer Detection Dashboard</h1>
+
+        <!-- Section for Past Predictions -->
+        <div class="mb-4">
+            <h2>Past Predictions</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Radius</th>
+                        <th>Texture</th>
+                        <th>Perimeter</th>
+                        <th>Area</th>
+                        <th>Prediction</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="predictions-table-body">
+                    <!-- Data will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section for Performance Metrics -->
+        <div class="mb-4">
+            <h2>Performance Metrics</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <canvas id="metrics-chart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section for Visualizations -->
+        <div class="mb-4">
+            <h2>Visualizations</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <canvas id="feature-distribution-chart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+CREATE TABLE predictions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    radius REAL,
+    texture REAL,
+    perimeter REAL,
+    area REAL,
+    prediction TEXT,
+    date TEXT
+);

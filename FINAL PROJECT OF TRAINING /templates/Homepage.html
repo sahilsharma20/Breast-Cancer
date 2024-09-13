@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: white;
+            width: 60%;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .input-field {
+            margin: 5px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Breast Cancer Prediction</h1>
+        <p>Enter the 30 feature values of the tumor to predict whether it's malignant or benign.</p>
+
+        <form action="/predict" method="POST">
+            {% for i in range(30) %}
+                <div class="input-field">
+                    <input type="text" name="feature{{ i }}" placeholder="Feature {{ i + 1 }}" required>
+                </div>
+            {% endfor %}
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction_text %}
+        <div class="result {% if 'Error' in prediction_text %}error{% endif %}">
+            <strong>{{ prediction_text }}</strong>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

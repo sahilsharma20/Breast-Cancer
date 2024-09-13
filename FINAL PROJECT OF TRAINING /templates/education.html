@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background-color: #e63946;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .section-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .section-img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Breast Cancer Detection</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="education.html">Educational Info</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Educational Information</h1>
+            <p>Learn more about breast cancer, its symptoms, prevention, treatment, and stages.</p>
+        </div>
+    </div>
+
+    <!-- Educational Info Section -->
+    <div class="container my-5">
+        <!-- What is Breast Cancer -->
+        <section>
+            <h2 class="section-title">What is Breast Cancer?</h2>
+            <img src="path/to/what-is-breast-cancer.jpg" alt="What is Breast Cancer" class="section-img">
+            <p>Breast cancer occurs when cells in the breast begin to grow uncontrollably. These cells form a tumor that can often be seen on an X-ray or felt as a lump.</p>
+        </section>
+
+        <!-- Symptoms -->
+        <section>
+            <h2 class="section-title">Symptoms of Breast Cancer</h2>
+            <img src="path/to/symptoms.jpg" alt="Symptoms of Breast Cancer" class="section-img">
+            <ul>
+                <li>Presence of a lump or mass in the breast or underarm area.</li>
+                <li>Changes in breast size or shape.</li>
+                <li>Changes in the appearance of the breast or nipple skin.</li>
+                <li>Unusual discharge from the nipple.</li>
+            </ul>
+        </section>
+
+        <!-- Steps of Treatment -->
+        <section>
+            <h2 class="section-title">Steps of Treatment</h2>
+            <img src="path/to/treatment-steps.jpg" alt="Treatment Steps" class="section-img">
+            <p>Treatment for breast cancer usually involves a combination of surgery, radiation therapy, chemotherapy, hormone therapy, and targeted therapy. The treatment plan depends on the type and stage of cancer.</p>
+        </section>
+
+        <!-- Prevention -->
+        <section>
+            <h2 class="section-title">Prevention</h2>
+            <img src="path/to/prevention.jpg" alt="Prevention" class="section-img">
+            <p>Preventive measures include maintaining a healthy weight, staying physically active, limiting alcohol intake, and undergoing regular screenings.</p>
+        </section>
+
+        <!-- Stages -->
+        <section>
+            <h2 class="section-title">Stages of Breast Cancer</h2>
+            <img src="path/to/stages.jpg" alt="Stages of Breast Cancer" class="section-img">
+            <p>Breast cancer stages range from 0 (carcinoma in situ) to IV (metastatic breast cancer). The stage depends on the tumor size, lymph node involvement, and the extent of spread to other parts of the body.</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Breast Cancer Detection. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
